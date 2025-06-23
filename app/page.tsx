@@ -2,6 +2,8 @@
 
 import { Chart } from "@/components/chart/chart";
 import { useTheme } from "next-themes";
+import ActionsCard from "@/components/actions/actions";
+import OverviewCard from "@/components/overview/overview";
 
 const initialData = [
   { time: "2018-12-22", open: 32.51, high: 33.51, low: 32.0, close: 32.51 },
@@ -63,10 +65,10 @@ export default function Home() {
 
         <div className="w-[20%] flex flex-col gap-1">
           <div className="border rounded-md p-2">
-            <div className="w-full h-full">positions & orders actions</div>
+            <ActionsCard />
           </div>
           <div className="border rounded-md p-2">
-            <div className="w-full h-full">account equity & perps overview</div>
+            <OverviewCard />
           </div>
         </div>
       </div>

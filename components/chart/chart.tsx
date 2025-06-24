@@ -44,7 +44,10 @@ export const Chart: React.FC<ChartProps> = ({
 
     const handleResize = () => {
       if (chartContainerRef.current) {
-        chart.applyOptions({ width: chartContainerRef.current.clientWidth });
+        chart.applyOptions({
+          width: chartContainerRef.current.clientWidth,
+          height: chartContainerRef.current.clientHeight,
+        });
       }
     };
 
@@ -63,7 +66,7 @@ export const Chart: React.FC<ChartProps> = ({
         visible: false,
       },
       width: chartContainerRef.current.clientWidth,
-      height: 300,
+      height: chartContainerRef.current.clientHeight,
     });
     chart.timeScale().fitContent();
 
@@ -95,5 +98,7 @@ export const Chart: React.FC<ChartProps> = ({
     areaBottomColor,
   ]);
 
-  return <div ref={chartContainerRef} />;
+  return (
+    <div ref={chartContainerRef} style={{ width: "100%", height: "100%" }} />
+  );
 };

@@ -41,33 +41,35 @@ export default function Home() {
 
   return (
     <main className="flex min-h-screen flex-col justify-between p-1">
-      <div className="flex w-full justify-between items-center gap-1">
-        <div className="w-[80%] flex flex-col gap-1">
-          <div className="flex gap-1">
-            <div className="w-[80%] flex flex-col gap-1">
+      <div className="flex flex-col w-full justify-between items-start gap-1">
+        <div className="w-full flex gap-1">
+          <div className="w-[80%] flex gap-1">
+            <div className="w-[75%] flex flex-col gap-1">
               <div className="border rounded-md p-2">
                 <div className="w-full h-full">chart info</div>
               </div>
-              <div className="border rounded-md p-2">
+              <div className="border rounded-md p-2 flex-1">
                 <Chart data={initialData} colors={chartColors}></Chart>
               </div>
             </div>
-            <div className="w-[20%] border rounded-md p-2">
+            <div className="w-[25%] border rounded-md p-2">
               <div className="w-full h-full">order book</div>
             </div>
           </div>
-          <div className="flex gap-1">
+
+          <div className="w-[20%] border rounded-md p-2">
+            <ActionsCard />
+          </div>
+        </div>
+
+        <div className="w-full flex gap-1">
+          <div className="w-[80%] flex gap-1">
             <div className="border rounded-md p-2 grow">
               <div className="w-full h-full">open positions info</div>
             </div>
           </div>
-        </div>
 
-        <div className="w-[20%] flex flex-col gap-1">
-          <div className="border rounded-md p-2">
-            <ActionsCard />
-          </div>
-          <div className="border rounded-md p-2">
+          <div className="w-[20%] border rounded-md p-2">
             <OverviewCard />
           </div>
         </div>

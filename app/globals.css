@@ -125,3 +125,18 @@
     @apply bg-background text-foreground;
   }
 }
+
+.underline-dotted {
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
+}
+
+.custom-tabs-trigger {
+  @apply inline-flex items-center justify-center whitespace-nowrap py-1 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 relative h-9 rounded-none border-b-2 border-b-transparent border-t-0 border-l-0 border-r-0 bg-transparent px-4 pb-3 pt-2 font-semibold text-muted-foreground shadow-none transition-none;
+}
+.custom-tabs-trigger[data-state="active"] {
+  @apply border-b-primary text-foreground shadow-none bg-transparent;
+}
+.dark .custom-tabs-trigger[data-state="active"] {
+  @apply border-b-white;
+}

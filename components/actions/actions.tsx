@@ -71,11 +71,11 @@ export default function ActionsCard() {
       </div>
 
       <Tabs defaultValue="market" className="w-full">
-        <TabsList className="w-full bg-background border-b border">
-          <TabsTrigger value="market" className="text-foreground">
+        <TabsList className="inline-flex h-9 items-center text-muted-foreground w-full justify-start rounded-none border-b bg-transparent p-0">
+          <TabsTrigger value="market" className="custom-tabs-trigger">
             Market
           </TabsTrigger>
-          <TabsTrigger value="limit" className="text-foreground">
+          <TabsTrigger value="limit" className="custom-tabs-trigger">
             Limit
           </TabsTrigger>
         </TabsList>
@@ -296,25 +296,35 @@ export default function ActionsCard() {
 
             <Separator className="mb-4" />
 
-            <div className="text-sm space-y-1"> 
+            <div className="text-sm space-y-1">
               <div className="flex justify-between">
-                <span className="underline">Liquidation Price</span>
+                <span className="underline-dotted cursor-pointer text-muted-foreground">
+                  Liquidation Price
+                </span>
                 <span>N/A</span>
               </div>
               <div className="flex justify-between">
-                <span>Order Value</span>
+                <span className="cursor-pointer text-muted-foreground">
+                  Order Value
+                </span>
                 <span>N/A</span>
               </div>
               <div className="flex justify-between">
-                <span>Margin Required</span>
+                <span className="cursor-pointer text-muted-foreground">
+                  Margin Required
+                </span>
                 <span>N/A</span>
               </div>
               <div className="flex justify-between">
-                <span className="underline">Slippage</span>
+                <span className="underline-dotted cursor-pointer text-muted-foreground">
+                  Slippage
+                </span>
                 <span>Est: 0% / Max: 8.00%</span>
               </div>
               <div className="flex justify-between">
-                <span>Fees</span>
+                <span className="underline-dotted cursor-pointer text-muted-foreground">
+                  Fees
+                </span>
                 <span>0.0450% / 0.0150%</span>
               </div>
             </div>

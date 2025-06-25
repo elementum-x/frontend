@@ -54,6 +54,7 @@ export default function Home() {
               </div>
             </div>
             <div className="w-[25%] border rounded-md p-2">
+              <OrderBook />
             </div>
           </div>
 

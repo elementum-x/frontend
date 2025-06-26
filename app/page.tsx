@@ -4,6 +4,7 @@ import { Chart } from "@/components/chart/chart";
 import { useTheme } from "next-themes";
 import ActionsCard from "@/components/actions/actions";
 import OverviewCard from "@/components/overview/overview";
+import PositionInfo from "@/components/overview/PositionInfo";
 import OrderBook from "@/components/orderbook/orderbook";
 
 const initialData = [
@@ -64,9 +65,9 @@ export default function Home() {
         </div>
 
         <div className="w-full flex gap-1">
-          <div className="w-[80%] flex gap-1">
-            <div className="border rounded-md p-2 grow">
-              <div className="w-full h-full">open positions info</div>
+          <div className="w-[80%] flex gap-1 h-[500px]">
+            <div className="border rounded-md grow py-2">
+              <PositionInfo />
             </div>
           </div>
 
